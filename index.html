@@ -52,8 +52,11 @@
     <h1>EtherJSON</h1>
     
     <script>
-      var wallet = new ethereumjs.Wallet();
+      define(function (require) {
+    var ethereumjs = require('ethereumjs-wallet');
+        var wallet = new ethereumjs.Wallet();
       console.log(wallet);
+});
     </script>
     
     <div class="row">
