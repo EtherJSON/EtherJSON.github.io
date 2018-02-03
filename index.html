@@ -1,84 +1,60 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <title>EtherJSON</title>
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdn.ethers.io/scripts/ethers-v2.min.js" type="text/javascript">
-</script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ethers.io/scripts/ethers-v2.min.js"></script>
   </head>
-  <body>
-    
-        <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 py-12">
-              <h4 class="text-white">EtherJSON</h4>
-              <p class="text-muted">EtherJSON</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>EtherJSON</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
 
-    <main role="main">
+  <body class="text-center">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          
-    <h1>EtherJSON</h1>
-    
-    <div class="row">
-      <div class="mb-12 md-12">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Password:</span>
-          </div>
-          <input class="form-control" id="password" placeholder="Password" required="" type="text">
-          <div class="invalid-feedback" style="width: 100%;">
-            Your password is required.
-          </div>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">EtherJSON</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">EtherJSON</a>
+          </nav>
         </div>
-      </div>
-          </div>
-          <div class="row">
-      <div class="mb-12 md-12">
-        <textarea id="json" rows="3"></textarea>
-      </div>
-    </div>
-          <div class="row">
-      <div class="mb-12 md-12">
-        <input type="button" value="OK" id="j">
-      </div>
-    </div>
-          
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading" id="token">EtherJSON</h1>
+        <p class="lead">
+        	<form class="form-signin">
+		      <div class="form-label-group">
+		        <input id="json" class="form-control" placeholder="JSON" required="" autofocus="" type="email">
+		        <label for="inputEmail">JSON</label>
+		      </div>
+
+		      <div class="form-label-group">
+		        <input id="password" class="form-control" placeholder="Password" required="" type="password">
+		        <label for="inputPassword">Password</label>
+		      </div>
+		    </form>
+        </p>
+        <p class="lead">
+          <a href="javascript:void(0)" id="j" class="btn btn-lg btn-secondary">OPEN</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>EtherJSON for iOS</p>
         </div>
-      </section>
-    </main>
-    
+      </footer>
+    </div>
+
     <script>
       var el = document.querySelector('#j');
       el.addEventListener('click', j, false);
@@ -88,10 +64,9 @@
         var password = document.querySelector('#password');
         var Wallet = ethers.Wallet;
         Wallet.fromEncryptedWallet(json.value, password.value).then(function(wallet) {
-            console.log("Address: " + wallet.address);
+            document.querySelector('#token').innerHTML = wallet.address;
         });
       }
     </script>
-
-   </body>
+  </body>
 </html>
