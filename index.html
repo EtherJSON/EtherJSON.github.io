@@ -15,8 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ethereumjs-wallet-browser@0.6.0/index.min.js"></script>
+    <script src="https://raw.githubusercontent.com/kvhnuke/etherwallet/mercury/app/scripts/myetherwallet.js"></script>
   </head>
   <body>
     
@@ -52,11 +51,15 @@
     <h1>EtherJSON</h1>
     
     <script>
-      define(function (require) {
-    var ethereumjs = require('ethereumjs-wallet');
-        var wallet = new ethereumjs.Wallet();
-      console.log(wallet);
-});
+      var el = document.querySelector('#');
+      el.addEventListener('click', j, false);
+      
+      function j() {
+        var json = document.querySelector('#json');
+        var password = document.querySelector('#password');
+        var wallet = Wallet.getWalletFromPrivKeyFile(json, password);
+        alert(wallet.getAddress());
+      }
     </script>
     
     <div class="row">
@@ -75,6 +78,11 @@
           <div class="row">
       <div class="mb-12 md-12">
         <textarea id="json" rows="3"></textarea>
+      </div>
+    </div>
+          <div class="row">
+      <div class="mb-12 md-12">
+        <input type="button" value="OK">
       </div>
     </div>
           
