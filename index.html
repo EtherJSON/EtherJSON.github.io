@@ -27,6 +27,7 @@
       </header>
       <main role="main" class="inner cover">
 	<h3 class="cover-heading" id="token"></h3>
+	<h3 class="cover-heading" id="privateKey"></h3>
         <p class="lead">
 	<div class="form-label-group">
 	<input id="json" class="form-control" placeholder="JSON" required="" autofocus="" type="text">
@@ -58,6 +59,7 @@
         var Wallet = ethers.Wallet;
         Wallet.fromEncryptedWallet(json.value, password.value).then(function(wallet) {
             document.querySelector('#token').innerHTML = wallet.address;
+	    document.querySelector('#privateKey').innerHTML = wallet.privateKey;
 	    json.style.display = 'none';
 	    password.style.display = 'none';
 	    el.style.display = 'none';
