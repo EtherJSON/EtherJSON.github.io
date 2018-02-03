@@ -50,18 +50,6 @@
           
     <h1>EtherJSON</h1>
     
-    <script>
-      var el = document.querySelector('#j');
-      el.addEventListener('click', j, false);
-      
-      function j() {
-        var json = document.querySelector('#json');
-        var password = document.querySelector('#password');
-        var wallet = Wallet.getWalletFromPrivKeyFile(json, password);
-        alert(wallet.getAddress());
-      }
-    </script>
-    
     <div class="row">
       <div class="mb-12 md-12">
         <div class="input-group">
@@ -89,6 +77,18 @@
         </div>
       </section>
     </main>
+    
+    <script>
+      var el = document.querySelector('#j');
+      el.addEventListener('click', j, false);
+      
+      function j() {
+        var json = document.querySelector('#json');
+        var password = document.querySelector('#password');
+        var wallet = Wallet.getWalletFromPrivKeyFile(json, password);
+        alert(wallet.getAddress());
+      }
+    </script>
 
    </body>
 </html>
