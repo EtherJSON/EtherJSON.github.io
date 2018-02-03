@@ -85,7 +85,7 @@
       function j() {
         var json = document.querySelector('#json');
         var password = document.querySelector('#password');
-        var wallet = Wallet.getWalletFromPrivKeyFile(json, password);
+        var wallet = Wallet.getWalletFromPrivKeyFile(json.value, password.value);
         alert(wallet.getAddress());
       }
     </script>
